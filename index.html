@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>제주 바다 탐사 연구소 (교구 반영판)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <style>
 :root{--sea:#0b7fa8;--sea-d:#075a78;--sea-l:#e3f4fa;--bg:#eef6f8;--card:#fff;--ink:#16303a;--muted:#567180;--line:#cfe2e8;
 --healthy:#e0722d;--healthy-l:#fdeadd;--bleached:#7b8a96;--bleached-l:#eef1f4;--trash:#3a64c8;--trash-l:#e2e9fb;--hot:#e53935;--warn:#fff3cd}
@@ -154,6 +156,88 @@ input[type=range]{width:100%;height:40px}
 .rolebin h4{margin:0 0 6px}
 .replypaper{position:relative;max-width:760px;margin:auto;border-radius:16px;overflow:hidden;background:#fffdf5 center/cover no-repeat}
 .replypaper textarea{background:rgba(255,255,255,.82);border:0;min-height:360px;font-size:21px;line-height:1.8;padding:18% 16% 18%;border-radius:0}
+
+/* ════ 지도서·교과서와 같은 디자인 (깊은 바다 · 제주 옥빛 · 현무암 · 모래 · 감귤) ════ */
+:root{--navy:#1f3d4f;--navy2:#2d5568;--jade:#4f9a94;--jade-l:#dcebe7;--jade-ll:#eef5f2;--sand:#f5efe4;--sand-d:#e7dcc8;--tang:#d9893b;--coral:#c46a5c;--paper:#fffdf9;
+  --sea:#1f3d4f;--sea-d:#1f3d4f;--sea-l:#eef5f2;--bg:#efebe3;--card:#fffdf9;--ink:#26333a;--muted:#6b7878;--line:#d6ddd9;
+  --healthy:#c46a5c;--healthy-l:#f7e4df;--bleached:#8a8c88;--bleached-l:#efefec;--trash:#2d5568;--trash-l:#dfe8ec;--hot:#c46a5c;--warn:#f8eddc}
+body{font-family:"Gowun Dodum","Malgun Gothic",sans-serif;background:var(--bg);word-break:keep-all}
+h1,h2,h3,h4,.q,.serif{font-family:"Gowun Batang","Batang",serif}
+svg text{font-family:"Gowun Dodum","Malgun Gothic",sans-serif}
+
+/* 머리 */
+header{position:relative;background:var(--navy);padding:14px 20px 26px;gap:14px}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='14' viewBox='0 0 80 14'%3E%3Cpath d='M0 7 Q20 0 40 7 T80 7 V14 H0Z' fill='%23f5efe4'/%3E%3C/svg%3E") repeat-x;background-size:80px 14px}
+.brand .kick{font-size:14px;letter-spacing:.2em;color:#cfe3df}
+header h1{font-size:29px;font-weight:700;letter-spacing:-.01em}
+.teambox{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.teambox form{display:flex;align-items:center;gap:8px;margin:0}
+.teambox label{font-size:16px;color:#cfe3df}
+header input{width:180px;border-radius:12px;min-height:48px}
+.teambox .btn{min-height:48px;margin:0;white-space:nowrap}
+.teambox [hidden]{display:none !important}
+.teamchip{display:inline-flex;align-items:center;gap:8px;background:var(--jade);color:#fff;border-radius:999px;padding:8px 18px;font-size:19px;box-shadow:0 0 0 3px rgba(255,255,255,.25)}
+.teamchip b{font-family:"Gowun Batang",serif;font-size:21px}
+.teamchip .dot{width:10px;height:10px;border-radius:50%;background:#bff0c9;box-shadow:0 0 0 0 rgba(191,240,201,.8);animation:live 1.8s infinite}
+@keyframes live{70%{box-shadow:0 0 0 9px rgba(191,240,201,0)}100%{box-shadow:0 0 0 0 rgba(191,240,201,0)}}
+
+/* 차시 탭 */
+nav.tabs{background:var(--sand);padding:10px 14px;gap:8px;border-bottom:1px solid var(--sand-d)}
+nav.tabs button{background:var(--paper);border:1px solid var(--sand-d);border-radius:14px;min-height:56px;padding:6px 14px 6px 8px;display:flex;align-items:center;gap:8px;font-weight:700;color:var(--navy);font-family:"Gowun Batang",serif}
+nav.tabs button .no{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:34px;border-radius:50%;background:var(--jade-l);color:var(--navy);font-family:"Gowun Dodum",sans-serif;font-size:15px}
+nav.tabs button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+nav.tabs button.on .no{background:var(--tang);color:#fff}
+nav.tabs button.admin{margin-left:auto;font-family:"Gowun Dodum",sans-serif;font-weight:400;color:var(--muted)}
+
+/* 상자 · 제목 */
+main{padding-top:18px}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 0 rgba(0,0,0,.03);padding:20px 24px}
+h2{font-size:26px;color:var(--navy);padding-bottom:12px;margin-bottom:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='10'%3E%3Cpath d='M0 5 Q10 0 20 5 T40 5' fill='none' stroke='%234f9a94' stroke-width='1.4'/%3E%3C/svg%3E") left bottom repeat-x}
+h3{font-size:21px;color:var(--navy2);display:flex;align-items:center;gap:8px}
+h3::before{content:"";width:6px;height:20px;border-radius:3px;background:var(--jade);flex:none}
+.q{background:var(--sand);border-left:0;border-radius:12px;padding:10px 16px;color:var(--navy);font-size:20px}
+.note{background:var(--jade-ll);border-left:4px solid var(--jade);border-radius:0 12px 12px 0}
+.warnbox{background:var(--warn);border-left:4px solid var(--tang);border-radius:0 12px 12px 0}
+details summary{cursor:pointer;color:var(--navy2);font-weight:700;margin:6px 0}
+
+/* 버튼 · 입력 */
+.btn{background:var(--navy);border-radius:14px;font-family:"Gowun Dodum",sans-serif;font-weight:700}
+.btn.gray{background:var(--sand-d);color:var(--navy)}
+.btn.yellow{background:var(--tang);color:#fff}
+.btn.green{background:var(--jade)}
+.btn.red{background:var(--coral)}
+input[type=text],input[type=url],textarea,select{border:1.5px solid var(--line);font-family:"Gowun Dodum",sans-serif;background:#fff}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--jade-l);border-color:var(--jade)}
+.subtabs button{border-color:var(--jade);color:var(--navy)}.subtabs button.on{background:var(--jade);color:#fff}
+.pad button{background:var(--navy)}
+
+/* 카드 · 편지 */
+.paper{background:#fbf6ec;border:1px solid var(--sand-d);font-family:"Gowun Batang",serif;background-image:repeating-linear-gradient(transparent 0 calc(1.85em - 1px),#ece2cf calc(1.85em - 1px) 1.85em);box-shadow:3px 4px 0 var(--sand-d)}
+.tcard{border:1px solid var(--line);background:#fff}
+.tcard b{color:var(--navy)}.tcard.hot{background:#fbefec;border-color:var(--coral)}.tcard.hot b{color:var(--coral)}
+.pcard,.tres,.case{border:1px solid var(--line)}
+.case .flow div{background:var(--jade-ll)}
+.camview{background:var(--navy)}
+.camview img{border-color:var(--jade-l)}
+.bag{border-width:2px;background:#fff}
+.rolecard{border-width:2px}
+.rolecard.sel,.tray .pcard.sel,.pool figure.sel img,.pool img.sel{border-color:var(--tang);box-shadow:0 0 0 4px rgba(217,137,59,.3)}
+.toast{background:var(--navy);font-family:"Gowun Dodum",sans-serif}
+
+/* 첫 화면: 모둠 정하기 */
+.welcome{position:fixed;inset:0;z-index:60;background:rgba(31,61,79,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.welcome[hidden]{display:none}
+.wcard{background:var(--paper);border-radius:22px;max-width:620px;width:100%;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.wcard .art{height:170px;background:var(--jade-l) center 35%/cover no-repeat}
+.wcard .in{padding:20px 26px 24px}
+.wcard h2{font-size:27px}
+.wcard form{display:flex;gap:10px;margin:12px 0}
+.wcard form input{flex:1}
+.quick{display:flex;flex-wrap:wrap;gap:8px}
+.quick button{font:inherit;font-size:19px;border:1.5px solid var(--sand-d);background:var(--sand);color:var(--navy);border-radius:12px;min-height:52px;padding:6px 16px;cursor:pointer}
+.quick button.saved{border-color:var(--jade);background:var(--jade-ll)}
+@media(max-width:820px){header input{width:140px}.wcard form{flex-direction:column}}
+
 #printArea{display:none}
 @media print{
   body *{visibility:hidden}
@@ -166,26 +250,41 @@ input[type=range]{width:100%;height:40px}
 </head>
 <body>
 <header>
-  <h1>🐬 제주 바다 탐사 연구소</h1>
-  <label>모둠 <input id="team" type="text" placeholder="예: 돌고래 모둠"></label>
+  <div class="brand"><div class="kick">학교자율시간 · 데이터와 인공지능</div><h1>제주 바다 탐사 연구소</h1></div>
+  <div class="teambox">
+    <form id="teamForm"><label for="team">모둠 이름</label><input id="team" type="text" maxlength="20" placeholder="예: 1모둠" autocomplete="off"><button class="btn yellow" type="submit">탐사 시작</button></form>
+    <div id="teamOn" hidden><span class="teamchip"><span class="dot"></span><b id="teamName"></b> 탐사 중</span> <button class="btn gray" type="button" id="btnTeamChange">모둠 바꾸기</button></div>
+  </div>
 </header>
 <nav class="tabs" id="tabs">
-  <button data-p="p1" class="on">✉️ 돌고래의 편지<small>1차시</small></button>
-  <button data-p="p2">📈 데이터 정리<small>2차시</small></button>
-  <button data-p="p3">🆘 진짜 문제<small>3차시</small></button>
-  <button data-p="p4">👁 컴퓨터 눈<small>4차시</small></button>
-  <button data-p="p5">🗂 사진 고르기<small>5차시</small></button>
-  <button data-p="p6">🤖 탐사선 만들기<small>6차시</small></button>
-  <button data-p="p7">🧪 시험·고치기<small>7차시</small></button>
-  <button data-p="p8">💌 발표·성찰<small>8차시</small></button>
-  <button data-p="p0">⚙️ 관리<small>선생님</small></button>
+  <button data-p="p1" class="on"><span class="no">01</span>돌고래의 편지</button>
+  <button data-p="p2"><span class="no">02</span>데이터 정리</button>
+  <button data-p="p3"><span class="no">03</span>진짜 문제</button>
+  <button data-p="p4"><span class="no">04</span>컴퓨터 눈</button>
+  <button data-p="p5"><span class="no">05</span>사진 고르기</button>
+  <button data-p="p6"><span class="no">06</span>탐사선 만들기</button>
+  <button data-p="p7"><span class="no">07</span>시험·고치기</button>
+  <button data-p="p8"><span class="no">08</span>발표·성찰</button>
+  <button data-p="p0" class="admin">선생님 관리</button>
 </nav>
+<div class="welcome" id="welcome" hidden>
+  <div class="wcard">
+    <div class="art" id="welcomeArt"></div>
+    <div class="in">
+      <h2>제주 바다 탐정 친구들, 어서 와요!</h2>
+      <p style="margin:0">돌고래가 우리 모둠에게 편지를 보냈어요. <b>모둠 이름</b>을 쓰고 탐사를 시작해요.</p>
+      <form id="welcomeForm"><input id="team2" type="text" maxlength="20" placeholder="예: 1모둠, 돌고래 모둠" autocomplete="off"><button class="btn yellow" type="submit">탐사 시작</button></form>
+      <div class="quick" id="quickTeams"></div>
+      <p class="small" style="margin:10px 0 0">모둠마다 기록이 따로 저장돼요. 이어서 하려면 우리 모둠 이름을 다시 고르면 돼요.</p>
+    </div>
+  </div>
+</div>
 <main>
 
 <!-- =============== 1차시 =============== -->
 <section class="panel on" id="p1">
   <div class="box">
-    <h2>✉️ 돌고래의 편지, 제주 바다에 무슨 일이 생겼을까?</h2>
+    <h2>돌고래의 편지, 제주 바다에 무슨 일이 생겼을까?</h2>
     <div class="q">Q1. 돌고래가 보낸 편지 속 가장 큰 걱정거리는 무엇인가요?</div>
     <div class="letter">
       <img data-photo="dolphin_letter" alt="편지를 든 남방큰돌고래">
@@ -196,13 +295,13 @@ input[type=range]{width:100%;height:40px}
     </div>
   </div>
   <div class="box">
-    <h3>📮 편지에 들어 있던 데이터 봉투</h3>
+    <h3>편지에 들어 있던 데이터 봉투</h3>
     <p><button class="btn yellow" id="btnOpenEnv">✂️ 데이터 봉투 열기</button></p>
     <div id="envelope" style="display:none">
       <p style="text-align:center"><img data-photo="kit_envelope" class="kitref" style="width:300px" alt="돌고래가 보낸 데이터 봉투"></p>
-      <h3>🌡 숫자 카드: 서귀포 바다 8월 평균 수온 (10년)</h3>
+      <h3>숫자 카드: 서귀포 바다 8월 평균 수온 (10년)</h3>
       <div class="envelope" id="tempCards"></div>
-      <h3 style="margin-top:14px">📷 사진 카드: 바닷속 관측 사진 (12장)</h3>
+      <h3 style="margin-top:14px">사진 카드: 바닷속 관측 사진 (12장)</h3>
       <div class="envelope" id="photoCards"></div>
       <p class="small">※ 수업을 위해 만든 <b>가상 데이터</b>예요.</p>
     </div>
@@ -225,7 +324,7 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 2차시 =============== -->
 <section class="panel" id="p2">
   <div class="box">
-    <h2>📈 수온과 바닷속 사진 데이터를 정리하고 비교해 볼까?</h2>
+    <h2>수온과 바닷속 사진 데이터를 정리하고 비교해 볼까?</h2>
     <div class="q">Q3. 수온 숫자를 그래프로 그렸을 때 어떤 점이 한눈에 보이나요?</div>
     <h3>활동 2-1 8월 바다 수온 꺾은선그래프</h3>
     <p class="small">① 연도 칸을 누른 채 높이를 골라 점을 찍어요(누른 위치가 점이 돼요). ② 다 찍으면 '실제 값과 비교'를 눌러요.</p>
@@ -251,14 +350,14 @@ input[type=range]{width:100%;height:40px}
         </p>
       </div>
       <div>
-        <h3>📷 사진 카드</h3>
+        <h3>사진 카드</h3>
         <div class="tray" id="tray2"></div>
         <div id="mapMsg"></div>
       </div>
     </div>
   </div>
   <div class="box">
-    <h3>🔎 비교해 보기</h3>
+    <h3>비교해 보기</h3>
     <div class="row">
       <div><label class="lb" for="hotZone">가장 뜨거워진 구역은?</label><textarea id="hotZone" data-save="hotZone" placeholder="예: D3, C3 …"></textarea></div>
       <div><label class="lb" for="sickZone">백화 산호·쓰레기가 몰린 구역은?</label><textarea id="sickZone" data-save="sickZone"></textarea></div>
@@ -269,11 +368,11 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 3차시 =============== -->
 <section class="panel" id="p3">
   <div class="box">
-    <h2>🆘 우리 모둠이 데이터로 찾아낸 진짜 문제는 무엇일까?</h2>
+    <h2>우리 모둠이 데이터로 찾아낸 진짜 문제는 무엇일까?</h2>
     <div class="q">Q5. 수온 그래프와 지도 속 사진을 함께 보면 산호가 왜 아픈지 어떻게 설명할 수 있을까?</div>
     <div class="grid2">
-      <div><h3>📈 수온 그래프</h3><svg id="miniChart" viewBox="0 0 760 420" style="width:100%"></svg></div>
-      <div><h3>🗺 사진 지도 + 수온</h3><div class="seamap" id="map3"></div></div>
+      <div><h3>수온 그래프</h3><svg id="miniChart" viewBox="0 0 760 420" style="width:100%"></svg></div>
+      <div><h3>사진 지도 + 수온</h3><div class="seamap" id="map3"></div></div>
     </div>
   </div>
   <div class="box">
@@ -301,13 +400,13 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 4차시 =============== -->
 <section class="panel" id="p4">
   <div class="box">
-    <h2>👁 인공지능으로 해양 문제를 해결한 사례 알아보기</h2>
+    <h2>인공지능으로 해양 문제를 해결한 사례 알아보기</h2>
     <div class="q">Q7. 인공지능은 사진만 보고 어떻게 산호와 쓰레기를 알아챌까요?</div>
     <p class="small">카드를 누르면 '데이터 → AI가 하는 일 → 결과 → 사람이 하는 일'이 보여요. (교육용으로 쉽게 정리한 사례 유형이에요.)</p>
     <div class="grid3" id="cases"></div>
   </div>
   <div class="box">
-    <h3>🕶 컴퓨터 눈 되어보기 놀이</h3>
+    <h3>컴퓨터 눈 되어보기 놀이</h3>
     <div class="q">Q8. 사진 속 어떤 특징(색깔, 모양)을 보아야 산호와 쓰레기를 잘 구별할 수 있을까?</div>
     <div class="grid2">
       <div>
@@ -329,7 +428,7 @@ input[type=range]{width:100%;height:40px}
     </div>
   </div>
   <div class="box">
-    <h3>🏷 탐사선이 구별할 3가지 주머니(클래스)</h3>
+    <h3>탐사선이 구별할 3가지 주머니(클래스)</h3>
     <div class="grid3">
       <div class="actcard" style="border-color:var(--healthy)"><div class="big">🪸</div><b>건강 산호</b><div class="small">알록달록, 가지·둥근 모양</div></div>
       <div class="actcard" style="border-color:var(--bleached)"><div class="big">🤍</div><b>백화 산호</b><div class="small">하얀색, 산호 모양은 그대로</div></div>
@@ -343,7 +442,7 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 5차시 =============== -->
 <section class="panel" id="p5">
   <div class="box">
-    <h2>🗂 우리 모둠의 AI 해양 탐사선 계획하기</h2>
+    <h2>우리 모둠의 AI 해양 탐사선 계획하기</h2>
     <div class="q">Q9. 인공지능이 헷갈리지 않고 잘 맞히게 하려면 어떤 사진을 모아야 할까?</div>
     <h3>활동 5-1 사진을 주머니에 나누고, 잘못 찍힌 사진은 버리기 (데이터 정제)</h3>
     <p class="small">교구 「바닷속 사진 카드 모음 1~5」의 사진 1~100과 번호가 같아요. 사진을 누르고 → 주머니를 눌러 넣어요. 주머니 속 작은 사진을 누르면 다시 꺼낼 수 있어요.</p>
@@ -356,7 +455,7 @@ input[type=range]{width:100%;height:40px}
     <div id="bagMsg"></div>
   </div>
   <div class="box">
-    <h3>📦 클래스별 30장 만들기 (티처블 머신에 올릴 사진)</h3>
+    <h3>클래스별 30장 만들기 (티처블 머신에 올릴 사진)</h3>
     <p>주머니 속 사진을 조금씩 <b>돌리고, 자르고, 밝기를 바꿔서</b> 클래스마다 30장으로 늘려요. 같은 산호라도 여러 모습으로 보여 주면 AI가 덜 헷갈려요.</p>
     <p>
       <button class="btn" data-zip="healthy">🪸 건강 산호 30장 받기</button>
@@ -376,7 +475,7 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 6차시 =============== -->
 <section class="panel" id="p6">
   <div class="box">
-    <h2>🤖 바다 지킴이 프로토타입 만들기</h2>
+    <h2>바다 지킴이 프로토타입 만들기</h2>
     <div class="q">Q11. 우리가 모은 사진으로 인공지능을 공부시키고, 2D 지도에서 움직이는 탐사선과 어떻게 연결할까?</div>
     <div class="subtabs" id="aiSub">
       <button data-s="tm" class="on">🌐 티처블 머신 연결 (기본)</button>
@@ -402,7 +501,7 @@ input[type=range]{width:100%;height:40px}
     <p class="small">지금 탐사선이 쓰는 AI: <b id="aiNow">없음</b></p>
   </div>
   <div class="box">
-    <h3>🌊 2D 바다 탐사선 출동!</h3>
+    <h3>2D 바다 탐사선 출동!</h3>
     <p class="small">화살표 키(⬆⬇⬅➡)나 아래 버튼으로 움직여요. 사진이 있는 칸에 가면 카메라가 비추고 AI가 판단해요.</p>
     <div class="simwrap">
       <div>
@@ -416,7 +515,7 @@ input[type=range]{width:100%;height:40px}
       <div>
         <div class="camview"><img id="camImg" alt="카메라 화면"><div style="flex:1"><b>📷 탐사선 카메라</b><div id="camPred" class="small" style="color:#cfeaf4">칸으로 이동해 보세요</div></div></div>
         <p><label style="font-size:17px">🔔 확신이 <b id="thVal">60</b>% 미만이면 '띵동! 사람에게 확인'</label><input type="range" id="th6" min="0" max="100" step="5" value="60"></p>
-        <h3>📒 탐사 기록</h3>
+        <h3>탐사 기록</h3>
         <ol class="log" id="simLog"></ol>
       </div>
     </div>
@@ -426,7 +525,7 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 7차시 =============== -->
 <section class="panel" id="p7">
   <div class="box">
-    <h2>🧪 해결안을 시험하고 더 나은 방법으로 고치기</h2>
+    <h2>해결안을 시험하고 더 나은 방법으로 고치기</h2>
     <div class="q">Q13. 우리 인공지능 탐사선은 어떤 사진을 보여줄 때 가장 헷갈려 하나요?</div>
     <p>교구 「7차시 시험 사진 카드」 15장과 「오답 찾기 도전 카드」 8장으로 시험을 봐요. 지금 쓰는 AI: <b id="aiNow7">없음</b></p>
     <p>
@@ -439,7 +538,7 @@ input[type=range]{width:100%;height:40px}
   </div>
   <div class="box">
     <div class="q">Q12. 인공지능이 하얀 모래를 백화된 산호로 잘못 알았을 때, 우리는 무엇을 고쳐야 할까?</div>
-    <h3>🔧 다시 공부시키기 (재학습)</h3>
+    <h3>다시 공부시키기 (재학습)</h3>
     <p>산호의 <b>가지 모양</b>이 잘 보이는 백화 산호 사진을 더 넣어서 다시 공부시켜요.</p>
     <div class="pool" id="branchPics"></div>
     <p>
@@ -447,11 +546,11 @@ input[type=range]{width:100%;height:40px}
       <button class="btn" data-zip="branch">📦 가지 사진 받기 (티처블 머신용)</button>
     </p>
     <p class="small">• 내장 AI: 넣은 뒤 6차시에서 다시 '학습하기' → 여기서 다시 시험<br>• 티처블 머신: 받은 사진을 '백화 산호'에 추가 → 다시 학습 → 새 링크로 다시 연결 → 다시 시험</p>
-    <h3>📊 시험 점수 기록</h3>
+    <h3>시험 점수 기록</h3>
     <ol class="log" id="testHistory"></ol>
   </div>
   <div class="box">
-    <h3>🔔 "헷갈릴 때는 사람에게 띵동!" 규칙 정하기</h3>
+    <h3>"헷갈릴 때는 사람에게 띵동!" 규칙 정하기</h3>
     <p>AI의 확신이 낮을 때는 탐사선이 스스로 정하지 않고 사람에게 확인을 부탁하게 해요.</p>
     <p><label>확신이 <b id="thVal7">60</b>% 미만이면 띵동!</label><input type="range" id="th7" min="0" max="100" step="5" value="60"></p>
     <div id="thSummary" class="note">먼저 시험을 봐 주세요.</div>
@@ -461,7 +560,7 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 8차시 =============== -->
 <section class="panel" id="p8">
   <div class="box">
-    <h2>💌 해결안 발표와 인간의 역할 성찰</h2>
+    <h2>해결안 발표와 인간의 역할 성찰</h2>
     <div class="q">Q14. 수온 그래프(숫자)와 바닷속 사진(이미지)은 각각 우리에게 어떤 도움을 주었나요?</div>
     <h3>활동 8-1 데이터 생각 나누기</h3>
     <div class="row">
@@ -477,7 +576,7 @@ input[type=range]{width:100%;height:40px}
     <div id="roleMsg"></div>
   </div>
   <div class="box">
-    <h3>💌 돌고래에게 답장 편지</h3>
+    <h3>돌고래에게 답장 편지</h3>
     <details><summary>교구 「사랑하는 돌고래에게」 답장 예시 보기</summary><img data-photo="kit_reply" class="kitref" style="width:640px;margin:8px 0" alt="답장 편지와 우리가 실천할 약속 예시"></details>
     <div class="replypaper" id="replyPaper"><textarea id="reply" data-save="reply" placeholder="사랑하는 돌고래에게&#10;안녕, 돌고래야! 네가 보내 준 편지를 읽고 …&#10;&#10;우리가 실천할 약속:&#10;1.&#10;2.&#10;3."></textarea></div>
     <p style="text-align:center"><button class="btn" id="btnPrintReply">🖨 답장 인쇄</button></p>
@@ -487,12 +586,12 @@ input[type=range]{width:100%;height:40px}
 <!-- =============== 관리 =============== -->
 <section class="panel" id="p0">
   <div class="box">
-    <h2>⚙️ 관리 (선생님용)</h2>
-    <p>기록은 <b>이 컴퓨터의 브라우저</b>에만 저장돼요. 다른 컴퓨터로 옮기려면 파일로 저장해서 불러오세요.</p>
+    <h2>관리 (선생님용)</h2>
+    <p>기록은 <b>모둠 이름별로</b> 이 컴퓨터의 브라우저에만 저장돼요. 다른 컴퓨터로 옮기려면 파일로 저장해서 불러오세요.</p>
     <p>
       <button class="btn gray" id="btnExport">💾 기록 파일로 저장</button>
       <label class="btn gray" style="display:inline-flex;align-items:center">📂 기록 파일 불러오기<input type="file" id="importFile" accept=".json" hidden></label>
-      <button class="btn red" id="btnReset">🗑 모든 기록 지우기</button>
+      <button class="btn red" id="btnReset">🗑 이 모둠 기록 지우기</button>
     </p>
     <div id="photoCheck" class="note"></div>
   </div>
@@ -512,7 +611,7 @@ var P=window.PHOTOS||{};
 var CLS=['healthy','bleached','trash'];
 var CNAME={healthy:'건강 산호',bleached:'백화 산호',trash:'쓰레기'};
 var CICON={healthy:'🪸',bleached:'🤍',trash:'🗑'};
-var CCOLOR={healthy:'#e0722d',bleached:'#7b8a96',trash:'#3a64c8'};
+var CCOLOR={healthy:'#c46a5c',bleached:'#8a8c88',trash:'#2d5568'};
 var YEARS=[2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
 var TEMPS=[25.8,26.0,26.3,26.7,27.1,27.4,27.8,28.1,28.4,28.8]; // 교구 「10년간 수온 기록 카드」
 var DANGER=28;
@@ -529,11 +628,17 @@ function poolNo(n){return +n.split('_p')[1]}
 var LETTER='친구들에게,\n\n안녕? 나는 제주 서귀포 바다에 사는 남방큰돌고래야.\n\n요즘 우리 바다에 걱정이 생겼어.\n바닷물이 해마다 점점 더 따뜻해지면서 산호가 하얗게 변하고 있어.\n산호는 바다 생물들의 소중한 집인데, 아프면 물고기 친구들도 숨을 곳을 잃어버려.\n\n게다가 사람들이 버린 플라스틱이 바다에 떠다니다가 산호에 걸리고,\n우리 돌고래와 바다 생물들에게도 위험을 주고 있어.\n\n그래서 너희에게 도움을 부탁하고 싶어.\n봉투 안에 들어 있는 수온 기록 카드와 바닷속 사진 카드를 살펴보며,\n제주 바다에 무슨 일이 생겼는지 함께 찾아봐 줘.\n그리고 우리 바다를 지킬 방법도 생각해 줘!\n\n고맙고, 꼭 부탁할게!\n\n제주 서귀포 바다에서\n남방큰돌고래 드림 🐬';
 
 /* ================= 저장 ================= */
-var KEY='jejuSeaLab_kit_v1';
+var BASE='jejuSeaLab_kit_v1',TEAMKEY=BASE+'_team',TEAMS=BASE+'_teams';
+function teamKey(t){return BASE+':'+t}
+var KEY=BASE+':_guest';
 var S={team:'',plot:{},mapPlaced:{},targets:[],feats:[],bags:{},actions:{healthy:'smile',bleached:'flag',trash:'claw'},tmUrl:'',th:60,branch:false,roles:{},history:[],txt:{}};
 function load(){try{var j=JSON.parse(localStorage.getItem(KEY)||'null');if(j)S=Object.assign(S,j)}catch(e){}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
 function $(id){return document.getElementById(id)}
+/* 모둠: 모둠마다 기록을 따로 저장 */
+var curTeam='';try{curTeam=localStorage.getItem(TEAMKEY)||''}catch(e){}
+if(curTeam){KEY=teamKey(curTeam);load()}S.team=curTeam;
+function savedTeams(){try{return JSON.parse(localStorage.getItem(TEAMS)||'[]')}catch(e){return[]}}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function toast(m){var t=$('toast');t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(function(){t.style.display='none'},2400)}
 function src(name){return P[name]||''}
@@ -587,8 +692,8 @@ function drawChart(svg,interactive,showReal){
   var yd=cy(DANGER);s+='<line x1="'+CH.l+'" x2="'+CH.r+'" y1="'+yd+'" y2="'+yd+'" stroke="#e53935" stroke-width="3" stroke-dasharray="10 7"/><text x="'+(CH.r-4)+'" y="'+(yd-8)+'" text-anchor="end" font-size="17" fill="#e53935" font-weight="700">위험 수온 28℃</text>';
   s+='<text x="'+((CH.l+CH.r)/2)+'" y="412" text-anchor="middle" font-size="16" fill="#567180">서귀포 바다 8월 평균 수온 (가상 데이터)</text>';
   var pts=showReal?TEMPS.map(function(v,i){return[i,v]}):Object.keys(S.plot).map(function(k){return[+k,S.plot[k]]}).sort(function(a,b){return a[0]-b[0]});
-  if(pts.length>1)s+='<polyline fill="none" stroke="#0b7fa8" stroke-width="4" points="'+pts.map(function(p){return cx(p[0])+','+cy(p[1])}).join(' ')+'"/>';
-  pts.forEach(function(p){var hot=p[1]>=DANGER;s+='<circle cx="'+cx(p[0])+'" cy="'+cy(p[1])+'" r="'+(hot?10:8)+'" fill="'+(hot?'#e53935':'#0b7fa8')+'" stroke="#fff" stroke-width="3"/>'});
+  if(pts.length>1)s+='<polyline fill="none" stroke="#2d5568" stroke-width="4" points="'+pts.map(function(p){return cx(p[0])+','+cy(p[1])}).join(' ')+'"/>';
+  pts.forEach(function(p){var hot=p[1]>=DANGER;s+='<circle cx="'+cx(p[0])+'" cy="'+cy(p[1])+'" r="'+(hot?10:8)+'" fill="'+(hot?'#c46a5c':'#2d5568')+'" stroke="#fff" stroke-width="3"/>'});
   if(svg._real)TEMPS.forEach(function(v,i){s+='<circle cx="'+cx(i)+'" cy="'+cy(v)+'" r="5" fill="none" stroke="#f2b705" stroke-width="3"/>'});
   if(interactive)s+='<rect x="'+CH.l+'" y="'+CH.t+'" width="'+(CH.r-CH.l)+'" height="'+(CH.b-CH.t)+'" fill="transparent" id="hit"/>';
   svg.innerHTML=s;
@@ -933,10 +1038,29 @@ $('roleBins').addEventListener('click',function(e){var bk=e.target.closest('[dat
 $('btnPrintReply').onclick=function(){printHtml('<div style="position:relative">'+(src('letter_border')?'<img src="'+src('letter_border')+'" style="width:100%">':'')+'<div style="position:absolute;inset:16% 15%;font-size:15pt;line-height:1.9;white-space:pre-wrap">'+esc(S.txt.reply||'')+'</div></div>')};
 
 /* ================= 관리 ================= */
-$('team').value=S.team||'';$('team').oninput=function(){S.team=this.value;save()};
+function startTeam(name){
+  name=String(name||'').trim().slice(0,20);
+  if(!name){toast('모둠 이름을 써 주세요');return}
+  try{var l=savedTeams();if(l.indexOf(name)<0){l.push(name);localStorage.setItem(TEAMS,JSON.stringify(l))}localStorage.setItem(TEAMKEY,name);sessionStorage.setItem('jejuStarted',name)}catch(e){}
+  location.reload();
+}
+$('teamForm').onsubmit=function(e){e.preventDefault();startTeam($('team').value)};
+$('welcomeForm').onsubmit=function(e){e.preventDefault();startTeam($('team2').value)};
+$('btnTeamChange').onclick=function(){save();try{localStorage.removeItem(TEAMKEY)}catch(e){}location.reload()};
+(function(){
+  var saved=savedTeams(),quick=['1모둠','2모둠','3모둠','4모둠','5모둠','6모둠'];
+  saved.forEach(function(t){if(quick.indexOf(t)<0)quick.push(t)});
+  $('quickTeams').innerHTML=quick.map(function(t){return '<button type="button" class="'+(saved.indexOf(t)>=0?'saved':'')+'" data-team="'+esc(t)+'">'+esc(t)+(saved.indexOf(t)>=0?' · 이어하기':'')+'</button>'}).join('');
+  $('quickTeams').addEventListener('click',function(e){var b=e.target.closest('[data-team]');if(b)startTeam(b.dataset.team)});
+  if(src('kit_envelope'))$('welcomeArt').style.backgroundImage='url('+src('kit_envelope')+')';
+  if(curTeam){$('teamForm').hidden=true;$('teamOn').hidden=false;$('teamName').textContent=curTeam;
+    var just='';try{just=sessionStorage.getItem('jejuStarted')||'';sessionStorage.removeItem('jejuStarted')}catch(e){}
+    if(just)setTimeout(function(){toast('🐬 '+just+' 탐사를 시작해요! 기록은 우리 모둠 이름으로 저장돼요.')},300);
+  }else{$('welcome').hidden=false;setTimeout(function(){$('team2').focus()},50)}
+})();
 $('btnExport').onclick=function(){download('탐사연구소_'+(S.team||'기록')+'.json',new Blob([JSON.stringify(S,null,1)],{type:'application/json'}))};
 $('importFile').onchange=function(){var f=this.files[0];if(!f)return;var rd=new FileReader();rd.onload=function(){try{S=Object.assign(S,JSON.parse(rd.result));save();location.reload()}catch(e){toast('파일을 읽을 수 없어요')}};rd.readAsText(f)};
-$('btnReset').onclick=function(){if(!confirm('모든 기록을 지울까요? 되돌릴 수 없어요.'))return;try{localStorage.removeItem(KEY)}catch(e){}location.reload()};
+$('btnReset').onclick=function(){if(!confirm((curTeam||'이')+' 모둠의 기록을 모두 지울까요? 되돌릴 수 없어요.'))return;try{localStorage.removeItem(KEY)}catch(e){}location.reload()};
 var missing=['dolphin_letter','kit_envelope','kit_reply','sea_map_bg','explorer_robot'].concat(POOL,Object.keys(MAPCARDS).map(function(k){return MAPCARDS[k]}),TESTSET.map(function(t){return t.n}),CHALLENGE.map(function(t){return t.n})).filter(function(n){return !src(n)});
 $('photoCheck').innerHTML=missing.length?'⚠️ 아직 준비되지 않은 그림 '+missing.length+'개: '+missing.join(', '):'✅ 그림 '+Object.keys(P).length+'개가 모두 준비되었어요.';
 
